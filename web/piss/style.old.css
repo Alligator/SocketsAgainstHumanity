@@ -1,0 +1,246 @@
+
+/* GENERIC STUFF */
+/*****************************************************************************/
+body {
+  line-height: 1.2;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32pt;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+input[type=text], input[type=password] {
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+
+/* GENERAL PAGE STUFF */
+/*****************************************************************************/
+.content {
+  padding: 20px;
+}
+
+
+/* CARDS */
+.card {
+  color: black;
+  font-size: 14pt;
+  width: 160px;
+  height: 212px;
+  background: #fff;
+  padding: 15px 15px;
+  border-radius: 10px;
+  float: left;
+  box-shadow: 1px 3px 6px #aaa;
+  margin: 10px;
+  position: relative;
+}
+
+.card-small {
+  margin: 10px;
+  width: 150px;
+  height: 200px;
+}
+
+.card-black {
+  color: white;
+  background: black;
+}
+
+
+/* hidden stuff */
+#password { display: none; }
+#error { display: none; }
+#lobby { display: none; }
+#game-form-wrapper { display: none; }
+#game { display: none; }
+
+
+
+/* LOGIN FORM */
+/*****************************************************************************/
+.card-form {
+  margin: 0 auto;
+  float: none;
+  font-size: 16pt;
+  width: 250px;
+  height: 300px;
+}
+
+#login input[type=submit] {
+  font-size: 0;
+  color: transparent;
+  width: 20px;
+  height: 15px;
+  border: none;
+  background: url('/static/arrow.png') no-repeat center center;
+}
+
+
+
+/* NEW GAME FORM */
+/*****************************************************************************/
+#game-form-wrapper {
+  background: #fff;
+}
+
+input[type=submit] {
+  background: #fff;
+  border: none;
+  font-size: 16pt;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+
+
+/* LOBBIES */
+/*****************************************************************************/
+
+
+
+.right {
+  float: right;
+  width: 30%;
+  height: 60%;
+}
+
+/* CHAT */
+/*****************************************************************************/
+#chat {
+  padding: 5px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 3px 6px #aaa;
+  height: 100%;
+  position: relative;
+}
+
+.chat-message {
+  font-weight: normal;
+}
+
+.chat-name {
+  margin-right: 5px;
+}
+
+.chat-lines {
+  position: absolute;
+  top: 35px;
+  bottom: 35px;
+  overflow: auto;
+  width:98%;
+}
+
+.chat-line {
+  padding: 5px;
+}
+
+.chat-line:nth-child(even) {
+  background: #eee;
+}
+
+#chat-input {
+  position: absolute;
+  bottom: 5px;
+  width: 97%;
+}
+
+#chat-input input[type=text] {
+  width: 100%;
+  border: 1px solid #aaa;
+  box-shadow: inset 0 0 10px #aaa;
+  border-radius: 5px;
+}
+
+
+/* IN-GAME */
+/*****************************************************************************/
+
+/* PLAYERS */
+.player {
+  padding: 5px 5px;
+}
+
+.player-score {
+  float: right;
+}
+
+.czar:before {
+  content: url('/static/crown.png');
+}
+
+
+/* CARDS */
+.black-card {
+  overflow: hidden;
+  float: left;
+}
+
+
+/* HAND */
+.hand {
+  overflow: hidden;
+  background: transparent;
+}
+
+.card-selected {
+  border: 1px solid #8af;
+  margin: 9px;
+  box-shadow: 0 0 10px #58c;
+}
+
+.hand .card {
+  /* woah */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.card-number {
+  color: #ccc;
+  font-size: 32pt;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  top: 40%;
+}
+
+.card-group {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.card-group .card {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.group-selected > .card {
+  border: 1px solid #8af;
+  margin: 9px;
+  box-shadow: 0 0 10px #58c;
+}
+
+.toprow {
+  overflow: hidden;
+}

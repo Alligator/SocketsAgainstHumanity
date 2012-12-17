@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <title>me.darvell.test</title>
+  <script src="/static/jquery-1.7.2.min.js"></script>
+  <script src="/static/settings.js"></script>
+  <script src="/static/socket.io.js"></script>
+  <script type="text/javascript">
+  var host_socket;
+  var client_socket;
+  var test_log = $("#log");
+
+  $(function () {
+
+  host_socket = io.connect(document.location.origin + "/gs", {
+    rememberTransport: false,
+    reconnect: false
+      });
+  client_socket = io.connect(document.location.origin + "/gs", {
+    rememberTransport: false,
+    reconnect: false
+      });
+  /* Register names */
+  host_socket.emit(settings.EVT_USER_REG,{'name':"Host-Test"});
+  client_socket.emit(settings.EVT_USER_REG,{'name':"Client-Test"});
+  
+  host_socket.on(settings.EVT_USER_REG, function (data) {
+    console.log(data);
+    Log("Host Name registration",data.status);
+  });
+  
+  client_socket.on(settings.EVT_USER_REG, function (data) {
+    console.log(data);
+    Log("Client Name registration",data.status);
+  });
+
+  
+  });
+
+  function Log(test,status){
+    var color = "";
+    if (status) color = "green";
+    else color = "red";
+
+    $("#log").append('<span style="color:' + color + '">' + test + '</span><br>');
+  }
+
+
+  </script>
+</head>
+
+<body>
+Testing data is placed in the log. Check for errors.
+<div id="log">
+
+</div>
+</body>
+
+</head>

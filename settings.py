@@ -1,0 +1,4 @@
+SOCKET_ENDPOINT = "/gs"
+WS_PORT = 42069
+DEBUG = True
+LOGGING = True

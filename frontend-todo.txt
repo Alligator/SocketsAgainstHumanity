@@ -1,0 +1,13 @@
+Cancel buttons on the create game & join game dialogs.
+
+Leave button in-game.
+
+Make long words wrap to avoid them breaking out of cards.
+
+That space below chat is annoying, do something. Maybe leave button & random other info?
+
+Make the user know they're the czar other than hiding their hand.
+
+Add more things to this list.
+
+Kiss a dog

@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/static/mustache.js"></script>
+    <script type="text/javascript" src="/static/socket.io.js"></script>
+
+    <script type="text/javascript" src="/static/game.js"></script>
+    <script type="text/javascript" src="/static/settings.js"></script>
+
+    <script type="text/javascript" src="/static/templates.js"></script>
+    <script type="text/javascript" src="/static/game-ui.js"></script>
+    <script>
+      WEB_SOCKET_SWF_LOCATION = 'http://cdn.socket.io/stable/WebSocketMain.swf';
+    </script>
+    <script type="text/javascript">
+    function host(no) {
+      player.register("Host" + no);
+      player.add_game("Testing" + no,10);
+    }
+
+    function client(game, no) {
+      player.register("Client" + no);
+      player.join_game("Testing" + game);
+    }
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <h1>video poke her</h1>
+
+      <div class="modal registration">
+        <div class="modal-content">
+          <h2>Registration</h2>
+          <div class="modal-error"></div>
+          <form action="" class="form-reg">
+            <input placeholder="Username" type="text" class="form-reg-name" />
+            <input  type="submit" />
+          </form>
+        </div>
+      </div>
+
+      <div class="modal waiting">
+        <div class="modal-content">
+          <h2>Waiting for players...</h2>
+        </div>
+      </div>
+
+      <div class="modal closeable new-game">
+        <div class="modal-content">
+          <div class="modal-error"></div>
+          <h2>Create a New Game</h2>
+          <form action="" class="form-ng">
+            <input placeholder="Game Name" type="text" class="form-ng-name" />
+            <input placeholder="Game Password" type="text" class="form-ng-pass" />
+            <label for="form-ng-maxplayers">Max players
+              <select id="form-ng-maxplayers">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </label>
+            <input  type="submit" />
+          </form>
+        </div>
+      </div>
+
+      <div class="modal closeable password">
+        <div class="modal-content">
+          <div class="modal-error"></div>
+          <h2>Enter Password</h2>
+          <form action="" class="form-pass">
+            <input placeholder="Password" type="password" class="form-pass-pass" />
+            <input  type="submit" />
+          </form>
+        </div>
+      </div>
+
+      <div class="lobbies">
+      </div>
+
+
+      <div class="game">
+        <div class="card-area">
+
+          <div class="top-row">
+            <div class="card black-card"></div>
+            <div class="winning-cards">
+            </div>
+            <div class="card card-transparent submit-card btn" style="display: none;">
+              <p>Submit</p>
+            </div>
+          </div>
+
+          <div class="bottom-row">
+            <div class="czar-overlay">You are the Czar</div>
+            <div class="submitted-cards">
+              <!-- <div class="card-group" data-handle="0"> -->
+              <!--   <div class="card">hello</div> -->
+              <!--   <div class="card">hello</div> -->
+              <!-- </div> -->
+              <!-- <div class="card-group" data-handle="0"> -->
+              <!--   <div class="card">goodbye</div> -->
+              <!--   <div class="card">goodbye</div> -->
+              <!-- </div> -->
+            </div>
+            <div class="my-hand">
+            </div>
+          </div>
+        </div>
+
+        <div class="user-area">
+          <div class="user-list">
+            <!-- <div class="user me"> -->
+            <!--   <div class="user-name">butt</div> -->
+            <!--   <div class="user-score">4</div> -->
+            <!-- </div> -->
+            <!-- <div class="user czar"> -->
+            <!--   <div class="user-name">butt</div> -->
+            <!--   <div class="user-score">4</div> -->
+            <!-- </div> -->
+          </div>
+
+          <div class="chat">
+            <h2>Chat</h2>
+            <div class="chat-lines">
+              <!-- <div class="chat-line"><strong>butt</strong> butt</div> -->
+            </div>
+
+            <div class="chat-input-wrapper">
+              <form class="chat-input">
+                <input class="chat-input-text" type="text" />
+                <input style="display:none" id="chat-submit" type="submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

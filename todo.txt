@@ -1,0 +1,19 @@
+doin
+----
+sometimes 9 cards on the frontend. even less??
+
+you can stay the czar a few rounds in a row??
+
+cards need to be grouped properly
+
+who played notification
+
+cards.txt errors
+
+breaks when someone leaves
+
+fix that goddamn _
+
+done
+----
+chat doesnt stay at bottom
